@@ -13,7 +13,7 @@ const projects = [
     title: "Law Office Management App",
     description: "Law office website featuring services, lawyer profiles, appointment booking, and contact options.",
     images: [
-      "../../public/inprogress1.jpg"
+      "/inprogress1.jpg"
         ],
     link: "",
     gradient: "from-blue-600 to-cyan-600"
@@ -23,9 +23,9 @@ const projects = [
     title: "MotorBike Shop",
     description: "Bike shop web app showcasing products with filtering, ordering, reviews, and multi-language support (English/Arabic).",
     images: [
-      "../../public/elbossely1.png  ",
-      "../../public/elbossely2.png",
-      "../../public/elbossely3.png"
+      "/elbossely1.png",
+      "/elbossely2.png",
+      "/elbossely3.png"
     ],
     link: "https://elbossely-bikeshop-frontend-2rin.vercel.app/",
     gradient: "from-cyan-600 to-teal-600"
@@ -35,7 +35,7 @@ const projects = [
     title: "Find My Art",
     description: "Art discovery app using the MetMuseum API to search and explore paintings, artists, and artworks.",
     images: [
-      "../../public/findmyart1.png"
+      "/findmyart1.png"
     ],
     link: "https://github.com/YahiaSalah11/FindmyArt",
     gradient: "from-indigo-600 to-purple-600"
@@ -45,7 +45,7 @@ const projects = [
     title: "Cloude Monet Gallery",
     description: "Collaborative project management tool with real-time updates.",
     images: [
-      "../../public/ClaudeMonetGallery.png"
+      "/ClaudeMonetGallery.png"
     ],
     link: "https://github.com/YahiaSalah11/gallerieWithReact",
     gradient: "from-pink-600 to-rose-600"
@@ -55,7 +55,7 @@ const projects = [
     title: "WhatsApp Clone",
     description: "Full-stack chat app like WhatsApp using React, Node.js, Express, and Socket.io.",
     images: [
-      "../../public/WhatsappClone.png"
+      "/WhatsappClone.png"
     ],
     link: "",
     gradient: "from-emerald-600 to-green-600"
@@ -102,12 +102,12 @@ export function ProjectsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <Card onClick={() => window.open(project.link, "_blank")} className="overflow-hidden border-2 border-blue-500/20 bg-gradient-to-br from-slate-800/80 to-blue-900/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 h-full">
+              <Card className="overflow-hidden border-2 border-blue-500/20 bg-gradient-to-br from-slate-800/80 to-blue-900/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 h-full">
                 <Carousel className="w-full">
                   <CarouselContent>
                     {project.images.map((image, imgIndex) => (
                       <CarouselItem key={imgIndex}>
-                        <div className="aspect-video relative overflow-hidden">
+                        <div onClick={() => window.open(project.link, "_blank")} className="aspect-video relative overflow-hidden">
                           <motion.div
                             whileHover={{ scale: 1.1 }}
                             transition={{ duration: 0.4 }}
@@ -130,7 +130,7 @@ export function ProjectsSection() {
                     </>
                   )}
                 </Carousel>
-                <CardContent className="p-6">
+                <CardContent onClick={() => window.open(project.link, "_blank")} className="p-6">
                   <motion.h3
                     className="text-xl mb-2 text-cyan-400"
                     whileHover={{ x: 5 }}
