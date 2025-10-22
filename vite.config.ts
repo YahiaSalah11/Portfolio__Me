@@ -57,5 +57,5 @@
       port: 3000,
       open: true,
     },
-    base: '/https://github.com/YahiaSalah11/Portfolio_Me/'
+    base: './'
   });
