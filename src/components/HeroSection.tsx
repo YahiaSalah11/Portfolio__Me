@@ -13,10 +13,10 @@ export function HeroSection() {
   };
 
   const handleDownloadResume = () => {
-    const fileUrl = `${import.meta.env.BASE_URL}YahiaElsherif_FullStack_Resume.pdf`;
+    const fileUrl = `${import.meta.env.BASE_URL}Software Engineer Resume - Yahia Salah.pdf`;
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "Yahia_Elsherif_Resume.pdf";
+    link.download = "Software Engineer Resume - Yahia Salah.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
