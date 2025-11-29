@@ -16,7 +16,7 @@ export function HeroSection() {
     const fileUrl = `${import.meta.env.BASE_URL}Software Engineer Resume - Yahia Salah.pdf`;
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "Software Engineer Resume - Yahia Salah.pdf";
+    link.download = "r Resume - Yahia Salah.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
